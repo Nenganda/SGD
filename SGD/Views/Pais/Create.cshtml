@@ -1,0 +1,34 @@
+﻿@model Pais
+
+@{
+    ViewData["Title"] = "Editar País";
+}
+
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    
+                    <h1>>> Novo Registro << </h1>
+                    <hr />
+                    <div class="form-group">
+                        <label asp-for="Nome" class="control-label"></label>
+                        <input asp-for="Nome" class="form-control"/>
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+
+                    <hr />
+                    <div class="form-row float-right">
+                        <div class="btn-group">
+                            <input type="submit" value="Salvar" class="btn btn-outline-success" />
+                            <a class="btn btn-outline-secondary" asp-controller="Pais"  asp-action="Index">Voltar</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+﻿@model Pais
+
+@{
+    ViewData["Title"] = "Detalhe País";
+}
+
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <div class="row">
+            <div class="col-md-8 offset-2">
+            <p>
+                <h1>@Model.Nome</h1>
+            </p>
+                <hr />
+                <div class="form-group">
+                    <label asp-for="Nome" class="control-label"></label>
+                    <input asp-for="Nome" class="form-control" readonly/>
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+
+                <hr />
+                <div class="form-row float-right">
+                    <div class="btn-group">
+                        <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@Model.Id">Editar</a>
+                        <a class="btn btn-outline-secondary" asp-action="Index">Voltar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
